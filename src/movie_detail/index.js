@@ -7,6 +7,6 @@ const imdbID = getParam("imdbID")
 getMovieByImdbID(imdbID)
   .then(movie => {
     const movieCard = buildMovieDetail(movie) 
-    document.getElementById('movieContainer').innerHTML += movieCard
+    document.getElementById('movie-details').innerHTML += movieCard
   })
   .catch(error => console.error('Error fetching movie:', error))

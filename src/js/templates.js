@@ -1,6 +1,6 @@
 export function buildMovieDetail(movie) {
     return `
-    <div class="movie-card">
+    <div class="movie-detail">
         <h2>${movie.Title}</h2>
         <p>Year: ${movie.Year}</p>
         <p>Rated: ${movie.Rated}</p>
@@ -24,7 +24,7 @@ export function buildMovieDetail(movie) {
 
 export function buildMovieCard(movie) {
     return `
-    <div class="movie-card">
+    <div class="movie">
         <a href="movie_detail/index.html?imdbID=${movie.imdbID}">
             <img src="${movie.Poster}" alt="${movie.Title} Poster">
         </a>
