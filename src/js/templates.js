@@ -1,4 +1,5 @@
 export function buildMovieDetail(movie) {
+    const firstImage = movie.Images[0];
     return `
         <div class="info">
             <img src=${movie.Poster} class="poster">
@@ -26,17 +27,10 @@ export function buildMovieDetail(movie) {
         <p>${movie.Awards}</p>
         <h3>Country:</h3>
         <p>${movie.Country}</p>
-        <p>Language: ${movie.Language}</p>
-        `;
+        <h3>Language:</h3>
+        <p>${movie.Language}</p>
+    `;
 }
-        // <div class="images-container">
-        //     ${movie.Images.slice(0, 1).map(imageUrl => `<img movie-enlargable src="${imageUrl}" alt="${movie.Title} Image">`).join('')}
-        // </div>
-        // <div class="images-container">
-        // ${movie.Images.map(imageUrl => `<img movie-enlargable src="${imageUrl}" alt="${movie.Title} Image">`).join('')}
-        // </div>
-        
-
 
 export function buildMovieCard(movie) {
     return `
