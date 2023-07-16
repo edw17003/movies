@@ -29,6 +29,9 @@ export function buildMovieDetail(movie) {
         <p>${movie.Country}</p>
         <h3>Language:</h3>
         <p>${movie.Language}</p>
+        <div class="images-container">
+            ${movie.Images.map(imageUrl => `<img movie-enlargable src="${imageUrl}" alt="${movie.Title} Image">`).join('')}
+        </div>
     `;
 }
 

@@ -51,6 +51,15 @@ h2 {
     border-radius: 5px;
     font-weight: 300;
 }
+.images-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5em;
+    margin: 1em 0 0;
+}
+.images-container > img {
+    max-width: 24%;
+}
 @media screen and (max-width: 600px) {
     #movie-details {
         width: 100%;
@@ -69,5 +78,11 @@ h2 {
     }
     .rating {
         margin: 0;
+    }
+    .images-container {
+        gap: 1em;
+    }
+    .images-container > img {
+        max-width: 100%;
     }
 }
