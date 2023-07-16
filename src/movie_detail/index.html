@@ -9,6 +9,36 @@
   <script src="index.js" type="module"></script>
 </head>
 <body>
-  <div id="movie-details"></div>
+  <header id="header">
+    <nav class="navbar">
+      <ul class="nav-list">
+        <li class="nav-item"><a href="/">Home</a></li>
+        <li class="nav-item"><a href="#">Movies</a></li>
+        <li class="nav-item"><a href="#">TV Shows</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="divider">
+    <div id="movie-details"></div>
+  </main>
 </body>
 </html>
+
+<!-- <div class="movie-detail">
+  <h2>${movie.Title}</h2>
+  <p>Year: ${movie.Year}</p>
+  <p>Rated: ${movie.Rated}</p>
+  <p>Runtime: ${movie.Runtime}</p>
+  <p>Genre: ${movie.Genre}</p>
+  <p>Director: ${movie.Director}</p>
+  <p>Writer: ${movie.Writer}</p>
+  <p>Actors: ${movie.Actors}</p>
+  <p>Plot: ${movie.Plot}</p>
+  <p>Language: ${movie.Language}</p>
+  <p>Country: ${movie.Country}</p>
+  <p>Awards: ${movie.Awards}</p>
+  <img src="${movie.Poster}" alt="${movie.Title} Poster">
+  <div class="images-container">
+    ${movie.Images.map(imageUrl => `<img src="${imageUrl}" alt="${movie.Title} Image">`).join('')}
+  </div>
+</div> -->

@@ -10,3 +10,4 @@ getMovieByImdbID(imdbID)
     document.getElementById('movie-details').innerHTML += movieCard
   })
   .catch(error => console.error('Error fetching movie:', error))
+

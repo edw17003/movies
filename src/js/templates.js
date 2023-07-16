@@ -1,26 +1,42 @@
 export function buildMovieDetail(movie) {
     return `
-    <div class="movie-detail">
-        <h2>${movie.Title}</h2>
-        <p>Year: ${movie.Year}</p>
-        <p>Rated: ${movie.Rated}</p>
-        <p>Runtime: ${movie.Runtime}</p>
-        <p>Genre: ${movie.Genre}</p>
-        <p>Director: ${movie.Director}</p>
-        <p>Writer: ${movie.Writer}</p>
-        <p>Actors: ${movie.Actors}</p>
-        <p>Plot: ${movie.Plot}</p>
-        <p>Language: ${movie.Language}</p>
-        <p>Country: ${movie.Country}</p>
-        <p>Awards: ${movie.Awards}</p>
-        <img src="${movie.Poster}" alt="${movie.Title} Poster">
-        <div class="images-container">
-          ${movie.Images.map(imageUrl => `<img src="${imageUrl}" alt="${movie.Title} Image">`).join('')}
+        <div class="info">
+            <img src=${movie.Poster} class="poster">
+            <div>
+                <h2>${movie.Title}</h2>
+                <div class="rating">
+                    <img src="https://dl.dropbox.com/s/c0olu3aadxcm3p7/star-icon.svg?raw=1">
+                    <h4>${movie.imdbRating}</h4>
+                </div> 
+                <div class="details">
+                    <span>${movie.Rated}</span>
+                    <span>${movie.Year}</span>
+                    <span>${movie.Runtime}</span>
+                </div>
+                <div class="genre">
+                    <div>${movie.Genre.split(",").join("</div><div>")}</div>
+                </div>   
+            </div>
         </div>
-      </div>
-      `
-  }
-  
+        <h3>Plot:</h3>
+        <p>${movie.Plot}</p>
+        <h3>Cast:</h3>
+        <p>${movie.Actors}</p>
+        <h3>Awards:</h3>
+        <p>${movie.Awards}</p>
+        <h3>Country:</h3>
+        <p>${movie.Country}</p>
+        <p>Language: ${movie.Language}</p>
+        `;
+}
+        // <div class="images-container">
+        //     ${movie.Images.slice(0, 1).map(imageUrl => `<img movie-enlargable src="${imageUrl}" alt="${movie.Title} Image">`).join('')}
+        // </div>
+        // <div class="images-container">
+        // ${movie.Images.map(imageUrl => `<img movie-enlargable src="${imageUrl}" alt="${movie.Title} Image">`).join('')}
+        // </div>
+        
+
 
 export function buildMovieCard(movie) {
     return `
