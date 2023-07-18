@@ -93,6 +93,10 @@ body {
   height: 444px;
   border: 1px solid transparent;
   border-radius: 10px;
+  opacity: 80%;
+  &:hover {
+    opacity: 100%;
+  }
 }
 
 #prevBtn,
@@ -137,5 +141,9 @@ p {
   #carousel {
     position: absolute;
     transform: translate(0%, 20%);
+  }
+
+  .movie img {
+    opacity: 100%;
   }
 }
